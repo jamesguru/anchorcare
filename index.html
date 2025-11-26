@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Care Anchor Pty Ltd - Disability Support Services</title>
+  <meta name="description" content="Professional NDIS support services in Northern Adelaide. Compassionate mentoring, support work, community access, and recovery coaching.">
+  <meta name="keywords" content="NDIS, support coordination, disability services, community support, Northern Adelaide, mentoring, recovery coaching">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Custom styles for Care Anchor branding */
+    :root {
+      --primary-color: #2a6ebb;
+      --secondary-color: #1a4d8c;
+      --accent-color: #4da6ff;
+      --light-color: #f0f7ff;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .logo-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .logo-icon:before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: 3px solid white;
+      border-radius: 50%;
+    }
+    
+    .logo-icon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 12px solid white;
+      bottom: 8px;
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .company-name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      line-height: 1.1;
+      margin: 0;
+    }
+    
+    .company-tagline {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.8rem;
+      color: var(--secondary-color);
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    
+    .hero {
+      background: linear-gradient(rgba(42, 110, 187, 0.8), rgba(26, 77, 140, 0.8)), url('assets/img/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    
+    .hero .icon-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+    
+    .hero .icon-box:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+    
+    .cta-btn {
+      background: var(--primary-color);
+      border: 2px solid var(--primary-color);
+      color: white;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-btn:hover {
+      background: transparent;
+      color: var(--primary-color);
+    }
+    
+    .section-title h2:after {
+      background: var(--primary-color);
+    }
+    
+    .service-item {
+      border: 1px solid #eaeaea;
+      border-radius: 10px;
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .service-item:hover {
+      border-color: var(--primary-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+    }
+    
+    .service-item .icon {
+      background: var(--light-color);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+      font-size: 24px;
+    }
+    
+    .stats {
+      background: var(--light-color);
+    }
+    
+    .stats i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    
+    .footer {
+      background: var(--secondary-color);
+      color: white;
+    }
+    
+    .footer a {
+      color: rgba(255,255,255,0.8);
+    }
+    
+    .footer a:hover {
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .logo-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      
+      .company-name {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@careanchor.com.au">info@careanchor.com.au</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>(08) 8254 1234</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <div class="logo-container">
+            <div class="logo-icon"></div>
+            <div class="logo-text">
+              <h1 class="company-name">Care Anchor</h1>
+              <p class="company-tagline">PTY LTD</p>
+            </div>
+          </div>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home<br></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">NDIS Information</a></li>
+                <li><a href="#">Community Events</a></li>
+                <li><a href="#">Support Guides</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn d-none d-sm-block" href="#contact">Get Started</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container position-relative">
+
+        <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
+          <h2>WELCOME TO CARE ANCHOR PTY LTD</h2>
+          <p>Your trusted partner for compassionate disability support services in Northern Adelaide and surrounding communities</p>
+        </div><!-- End Welcome -->
+
+        <div class="content row gy-4">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
+              <h3>Why Choose Care Anchor?</h3>
+              <p>
+                At Care Anchor Pty Ltd, we provide personalized support services that focus on your unique needs, goals, and aspirations. Our experienced team is dedicated to helping you navigate the NDIS and connect with the right services to live your best life.
+              </p>
+              <div class="text-center">
+                <a href="#about" class="more-btn"><span>Learn More</span> <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="row gy-4">
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
+                    <i class="bi bi-compass"></i>
+                    <h4>Personalized Guidance</h4>
+                    <p>We create tailored support plans that align with your individual goals and preferences</p>
+                  </div>
+                </div><!-- End Icon Box -->
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
+                    <i class="bi bi-people"></i>
+                    <h4>Community Connection</h4>
+                    <p>Building strong relationships with local providers and community resources</p>
+                  </div>
+                </div><!-- End Icon Box -->
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
+                    <i class="bi bi-shield-check"></i>
+                    <h4>Trusted Expertise</h4>
+                    <p>Years of experience in disability support services and NDIS coordination</p>
+                  </div>
+                </div><!-- End Icon Box -->
+
+              </div>
+            </div>
+          </div>
+        </div><!-- End  Content-->
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4 gx-5">
+
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+          </div>
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <h3>About Us</h3>
+            <p>
+              Care Anchor Pty Ltd is a dedicated disability support service based in Northern Adelaide, South Australia. We specialize in helping NDIS participants navigate their plans and connect with the services they need to live fulfilling lives.
+            </p>
+            <ul>
+              <li>
+                <i class="fa-solid fa-hands-helping"></i>
+                <div>
+                  <h5>Person-Centered Approach</h5>
+                  <p>We focus on your strengths, goals, and preferences in all our support planning</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-map-marker-alt"></i>
+                <div>
+                  <h5>Northern Adelaide Focus</h5>
+                  <p>Extensive connections with service providers across Northern Adelaide and surrounding areas</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <h5>NDIS Expertise</h5>
+                  <p>Deep understanding of the NDIS framework and processes to maximize your plan</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-users"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Participants Supported</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-handshake"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Provider Partnerships</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Years in Community</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fas fa-star"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Participant Satisfaction</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Services</h2>
+        <p>Comprehensive disability support services tailored to your unique needs</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Mentoring</h3>
+              </a>
+              <p>One-on-one guidance and support to develop life skills, build confidence, and achieve personal goals through structured mentoring relationships.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Support Work</h3>
+              </a>
+              <p>Personalized assistance with daily living activities, skill development, and achieving independence in your home and community.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Community Access</h3>
+              </a>
+              <p>Facilitating engagement in social, recreational, and community activities to build connections and enhance quality of life.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Recovery Coaching</h3>
+              </a>
+              <p>Specialized support for participants with psychosocial disabilities to develop recovery goals and build resilience for improved mental wellbeing.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-compass"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Support Coordination</h3>
+              </a>
+              <p>Expert guidance to understand and implement your NDIS plan, connect with providers, and build capacity to manage supports effectively.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Get Started</h2>
+        <p>Begin your journey with our compassionate support services</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <input type="date" name="date" class="form-control datepicker" id="date" placeholder="Preferred Date" required="">
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="service" id="service" class="form-select" required="">
+                <option value="">Service Interested In</option>
+                <option value="Mentoring">Mentoring</option>
+                <option value="Support Work">Support Work</option>
+                <option value="Community Access">Community Access</option>
+                <option value="Recovery Coaching">Recovery Coaching</option>
+                <option value="Support Coordination">Support Coordination</option>
+              </select>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="referral" id="referral" class="form-select" required="">
+                <option value="">How did you hear about us?</option>
+                <option value="NDIS">NDIS</option>
+                <option value="Friend/Family">Friend/Family</option>
+                <option value="Healthcare Professional">Healthcare Professional</option>
+                <option value="Online Search">Online Search</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Tell us about your goals and needs"></textarea>
+          </div>
+          <div class="mt-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your consultation request has been sent successfully. Thank you!</div>
+            <div class="text-center"><button type="submit">Request Consultation</button></div>
+          </div>
+        </form>
+
+      </div>
+
+    </section><!-- /Appointment Section -->
+
+    <!-- Departments Section -->
+    <section id="team" class="departments section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Team</h2>
+        <p>Meet our dedicated support professionals</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#team-tab-1">Sarah Johnson</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#team-tab-2">Michael Chen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#team-tab-3">Lisa Williams</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#team-tab-4">David Thompson</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="team-tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Sarah Johnson</h3>
+                    <p class="fst-italic">Senior Support Coordinator</p>
+                    <p>With over 8 years of experience in disability services, Sarah specializes in complex support needs and NDIS plan implementation. She is passionate about helping participants achieve greater independence and community connection.</p>
+                    <p>Sarah holds a Bachelor of Social Work and has extensive training in trauma-informed care and positive behavior support.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-1.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="team-tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Michael Chen</h3>
+                    <p class="fst-italic">Mentoring & Community Access Coordinator</p>
+                    <p>Michael has a background in community development and is passionate about creating inclusive communities. He specializes in mentoring programs and community participation initiatives.</p>
+                    <p>With 5 years of experience in the disability sector, Michael brings a fresh perspective and innovative approaches to support services.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-2.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="team-tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Lisa Williams</h3>
+                    <p class="fst-italic">Recovery Coach & Support Worker</p>
+                    <p>Lisa specializes in psychosocial recovery coaching and personal support work. With a background in mental health nursing, she understands the importance of holistic care.</p>
+                    <p>She has worked extensively with participants with psychosocial disabilities and complex health needs for over 6 years.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-3.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="team-tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>David Thompson</h3>
+                    <p class="fst-italic">Team Leader - Support Work</p>
+                    <p>David focuses on coordinating our support worker team and ensuring high-quality service delivery. He has strong connections with local community resources.</p>
+                    <p>With a background in disability support and team management, David has helped numerous participants achieve their daily living goals.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-4.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Departments Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="doctors section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>What our participants and their families say about our services</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Lisa Thompson</h4>
+                <span>Participant</span>
+                <p>"Care Anchor completely transformed my NDIS experience. They listened to my goals and connected me with perfect support providers. I've never felt more empowered in my life."</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>James Wilson</h4>
+                <span>Family Member</span>
+                <p>"The team at Care Anchor has been incredible in supporting my brother. Their patience, expertise, and genuine care have made all the difference in his quality of life."</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Maria Rodriguez</h4>
+                <span>Participant</span>
+                <p>"I was overwhelmed by the NDIS process until I found Care Anchor. They guided me every step of the way and helped me access services I didn't even know were available."</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Robert Chen</h4>
+                <span>Community Partner</span>
+                <p>"As a local service provider, we love working with Care Anchor. Their participants are always well-prepared and their coordinators are professional and responsive."</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-fill"></i></a>
+                  <a href=""><i class="bi bi-star-half"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions about our disability support services</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>What services does Care Anchor provide?</h3>
+                <div class="faq-content">
+                  <p>We offer mentoring, support work, community access, recovery coaching, and support coordination services for NDIS participants in Northern Adelaide and surrounding areas.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How do I know if I'm eligible for your services?</h3>
+                <div class="faq-content">
+                  <p>If you have an NDIS plan that includes funding for the services we provide, you can access our support. We also offer free initial consultations to discuss your needs and eligibility.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>What areas do you service?</h3>
+                <div class="faq-content">
+                  <p>We primarily service Northern Adelaide and surrounding areas in South Australia. However, we can provide some services remotely throughout SA depending on your needs.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How much do your services cost?</h3>
+                <div class="faq-content">
+                  <p>Our services are funded through your NDIS plan if you have the appropriate supports included. There are no out-of-pocket costs for participants with relevant funding in their NDIS plans.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Can I change support providers if I'm not happy?</h3>
+                <div class="faq-content">
+                  <p>Yes, you have complete choice and control over your supports. If you're not satisfied with your current provider, you can change to a different provider at any time.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How quickly can I start receiving services?</h3>
+                <div class="faq-content">
+                  <p>Once we've completed our initial assessment and service agreement, we can typically begin providing support within 1-2 weeks, depending on your specific needs and availability.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Community Impact</h2>
+        <p>How we're making a difference in the Northern Adelaide community</p>
+      </div><!-- End Section Title -->
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-1.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-2.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-3.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-4.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-5.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-6.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-7.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-8.jpg" class="glightbox" data-gallery="images-gallery">
+                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Get in touch to learn more about our services or schedule a consultation</p>
+      </div><!-- End Section Title -->
+
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417897.1454098942!2d138.45127249999998!3d-34.925068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0cf19d7745f17%3A0x5017d681632bf0!2sNorthern%20Adelaide%2C%20SA!5e0!3m2!1sen!2sau!4v1690000000000!5m2!1sen!2sau" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Northern Adelaide, South Australia</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>(08) 8254 1234</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>info@careanchor.com.au</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <div class="logo-container">
+              <div class="logo-icon"></div>
+              <div class="logo-text">
+                <span class="company-name">Care Anchor</span>
+                <p class="company-tagline">PTY LTD</p>
+              </div>
+            </div>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Northern Adelaide, SA</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>(08) 8254 1234</span></p>
+            <p><strong>Email:</strong> <span>info@careanchor.com.au</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#services">Mentoring</a></li>
+            <li><a href="#services">Support Work</a></li>
+            <li><a href="#services">Community Access</a></li>
+            <li><a href="#services">Recovery Coaching</a></li>
+            <li><a href="#services">Support Coordination</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">NDIS Information</a></li>
+            <li><a href="#">Community Events</a></li>
+            <li><a href="#">Support Guides</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Join Our Community</h4>
+          <ul>
+            <li><a href="#">Volunteer Opportunities</a></li>
+            <li><a href="#">Community Partnerships</a></li>
+            <li><a href="#">Feedback & Suggestions</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Newsletter Signup</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 company-name">Care Anchor Pty Ltd</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="">V8 Techworks</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
